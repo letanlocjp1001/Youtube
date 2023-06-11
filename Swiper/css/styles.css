@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(315deg, #ffffff 0%, #ff7878 74%);
+
+  margin: 100px auto;
+}
+
+.main-swiper {
+  width: 600px;
+}
+
+.main-swiper img {
+  max-width: 100%;
+}
+.sub-swiper {
+  width: 600px;
+  max-width: 100%;
+  cursor: pointer;
+}
+.sub-swiper img {
+  max-width: 100%;
+}
