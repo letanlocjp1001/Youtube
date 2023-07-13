@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Dancing Script', cursive;
+}
+li {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px solid rgba(255, 80, 114, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: beige;
+}
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: darkcyan;
+}
+.logo .letter {
+  display: inline-block;
+}
+
+.nav {
+  display: flex;
+  column-gap: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.nav_list {
+  color: #ff5072;
+  padding-bottom: 5px;
+  position: relative;
+  cursor: pointer;
+}
+.nav_list::before {
+  background: #ff5072;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  margin: auto;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.5s;
+}
+
+.nav_list:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.line {
+  position: absolute;
+  bottom: -1.5px;
+  height: 3px;
+  width: 150px;
+  background: linear-gradient(90deg, transparent, #ff5072);
+  z-index: 10;
+  animation: animate 6s infinite linear;
+}
+
+@keyframes animate {
+  0% {
+    left: 0;
+    transform: translate(-100%);
+  }
+  100% {
+    left: 100%;
+    transform: translate(0%);
+  }
+}
+
+.wrap {
+  height: 100vh;
+  position: relative;
+}
+.center-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.center-img img {
+  width: 600px;
+  position: absolute;
+  left: 28%;
+  top: 26%;
+  z-index: 1;
+}
+.img {
+  display: inline-block;
+  width: 200px;
+  opacity: 0;
+}
+.img-1 {
+  position: absolute;
+  top: 7%;
+  left: 200px;
+  transform: translate(282px, 290px) scale(0);
+}
+.img-2 {
+  position: absolute;
+  top: 36%;
+  left: 0;
+  transform: translate(486px, 0) scale(0);
+}
+.img-3 {
+  position: absolute;
+  top: 70%;
+  left: 70px;
+  transform: translate(447px, -334px) scale(0);
+}
+
+.img-4 {
+  position: absolute;
+  top: 10%;
+  right: 300px;
+  transform: translate(-395px, 267px) scale(0);
+}
+.img-5 {
+  position: absolute;
+  top: 55%;
+  right: 200px;
+  transform: translate(-468px, -170px) scale(0);
+}
+.img-6 {
+  position: absolute;
+  top: 76%;
+  right: 550px;
+  transform: translate(-130px, -392px) scale(0);
+}
