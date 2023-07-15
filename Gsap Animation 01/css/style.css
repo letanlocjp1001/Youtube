@@ -104,8 +104,12 @@ header {
 }
 .img {
   display: inline-block;
-  width: 200px;
+  width: 300px;
   opacity: 0;
+}
+.img img {
+  width: 100%;
+  height: auto;
 }
 .img-1 {
   position: absolute;
@@ -143,4 +147,49 @@ header {
   top: 76%;
   right: 550px;
   transform: translate(-130px, -392px) scale(0);
+}
+@media only screen and (max-width: 767px) {
+  .center-img img {
+    width: 400px;
+    left: 20%;
+    top: 40%;
+  }
+
+  .img {
+    width: 200px;
+  }
+
+  .img-1 {
+    top: 20%;
+    left: 20px;
+  }
+  .img-2 {
+    top: 10%;
+    left: 40%;
+  }
+  .img-3 {
+    position: absolute;
+    top: 70%;
+    left: 70px;
+    transform: translate(447px, -334px) scale(0);
+  }
+
+  .img-4 {
+    position: absolute;
+    top: 25%;
+    right: 100px;
+    transform: translate(-395px, 267px) scale(0);
+  }
+  .img-5 {
+    position: absolute;
+    top: 55%;
+    right: 0px;
+    transform: translate(-468px, -170px) scale(0);
+  }
+  .img-6 {
+    position: absolute;
+    top: 76%;
+    right: 150px;
+    transform: translate(-130px, -392px) scale(0);
+  }
 }
