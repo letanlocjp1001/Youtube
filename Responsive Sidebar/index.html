@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive SideBar HMTL CSS JS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="name">
+        <div class="name_text">Kaneki Dev</div>
+        <div class="btn">
+          <span class="icon top"></span>
+          <span class="icon middle"></span>
+          <span class="icon bottom"></span>
+        </div>
+      </div>
+
+      <ul class="nav_list">
+        <li class="nav_item">
+          <a href="#">
+            <!-- ICON -->
+            <i class="fa-solid fa-house"></i>
+            <span class="links_name">HOME</span>
+          </a>
+          <span class="tooltip">HOME</span>
+        </li>
+        <li class="nav_item">
+          <a href="#">
+            <!-- ICON -->
+            <i class="fa-solid fa-address-card"></i>
+            <span class="links_name">ABOUT</span>
+          </a>
+          <span class="tooltip">ABOUT</span>
+        </li>
+        <li class="nav_item">
+          <a href="#">
+            <!-- ICON -->
+            <i class="fa-solid fa-code"></i>
+            <span class="links_name">SKILL</span>
+          </a>
+          <span class="tooltip">SKILL</span>
+        </li>
+        <li class="nav_item">
+          <a href="#">
+            <!-- ICON -->
+            <i class="fa-solid fa-folder"></i>
+            <span class="links_name">PROJECT</span>
+          </a>
+          <span class="tooltip">PROJECT</span>
+        </li>
+        <li class="nav_item">
+          <a href="#">
+            <!-- ICON -->
+            <i class="fa-solid fa-phone"></i>
+            <span class="links_name">CONTACT</span>
+          </a>
+          <span class="tooltip">CONTACT</span>
+        </li>
+      </ul>
+
+      <div class="info">
+        <a href="#">
+          <img src="img/logo.png" alt="logo" class="logo" />
+          <div class="table">
+            <div class="table_text">I'm a Front End Developer</div>
+          </div>
+        </a>
+        <div class="tooltip">I'm a Front End Developer</div>
+      </div>
+    </div>
+    <section class="home_section">
+      <div class="text">
+        RESPONSIVE <br />
+        BAR MENU
+      </div>
+    </section>
+
+    <script>
+      const sidebar = document.querySelector('.sidebar')
+
+      const btn = document.querySelector('.btn')
+      btn.onclick = function () {
+        sidebar.classList.toggle('open')
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to right top, #800080, #ffc0cb);
+  font-family: 'Poppins', sans-serif;
+}
+.home_section {
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  left: calc(78px - 20px);
+  width: 100vw;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.sidebar.open ~ .home_section {
+  left: calc(250px - 20px);
+  transition: all 0.5s ease;
+}
+
+.home_section .text {
+  display: inline-block;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  margin: 30px 30px 30px 40px;
+}
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 78px;
+  background: #fff;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  z-index: 99;
+  transition: width 0.5s;
+}
+
+.sidebar.open {
+  width: 250px;
+  transition: width 0.5s;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  margin-top: 20px;
+}
+.name_text {
+  margin-left: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff5072;
+  opacity: 0;
+  transform: translateX(-250px);
+  transition: 0.5s;
+}
+.sidebar.open .name_text {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 0.5s;
+}
+
+.btn {
+  flex-shrink: 0;
+  transform: translateX(-70px);
+  margin-right: 20px;
+  transition: 0.5s;
+  position: relative;
+  width: 30px;
+  height: 20px;
+}
+.icon {
+  position: absolute;
+  display: block;
+  border-radius: 3px;
+  background: #ff5072;
+  transition: all 0.5s;
+}
+
+.middle {
+  width: 28px;
+  height: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.top {
+  transform: rotate(45deg);
+  width: 15px;
+  height: 3px;
+  top: 3px;
+  right: 0;
+}
+.bottom {
+  transform: rotate(-45deg);
+  width: 15px;
+  height: 3px;
+  bottom: 3px;
+  right: 0;
+}
+
+.sidebar.open .btn {
+  transform: translateX(0);
+  transition: 0.5s;
+}
+.sidebar.open .icon.top {
+  transform: rotate(-45deg);
+  left: 0;
+}
+.sidebar.open .icon.bottom {
+  transform: rotate(45deg);
+  left: 0;
+}
+
+.nav_list {
+  border-bottom: solid rgba(0, 0, 0, 0.1) 1px;
+}
+.nav_item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.nav_item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 0;
+}
+.nav_item a i {
+  position: relative;
+  color: #575f66;
+  font-size: 25px;
+  margin-left: calc((78px - 25px) / 2);
+  z-index: 2;
+}
+.sidebar .links_name {
+  color: #575f66;
+  margin: auto 30px;
+  width: 110px;
+  transform: translateX(-250px);
+}
+.sidebar.open .links_name {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.nav_item a:hover i,
+.nav_item a:hover .links_name {
+  color: #ff5072;
+  transform: 0.5s;
+}
+
+.tooltip {
+  color: #ff5072;
+  font-weight: bold;
+  background: white;
+  width: 110px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  transition: 0.5s;
+}
+.sidebar.open .tooltip {
+  display: none;
+}
+
+.nav_item:hover .tooltip {
+  opacity: 1;
+  left: 85px;
+  transition: 0.5s;
+}
+.info {
+  position: relative;
+  margin-top: 10px;
+  text-align: center;
+}
+.logo {
+  position: relative;
+  width: 60px;
+  z-index: 10;
+  transition: 0.5s;
+}
+.table {
+  position: absolute;
+  z-index: 8;
+  top: 30px;
+  width: 70%;
+  left: 15%;
+  height: 0;
+  margin: 0 auto;
+  color: white;
+  background: linear-gradient(60deg, #4d6fff, #aa6deb);
+  border-radius: 20px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+.sidebar.open .table {
+  opacity: 1;
+  height: 150px;
+  transition: 0.5s;
+}
+
+.info .tooltip {
+  color: #575f66;
+  background: white;
+  font-size: 15px;
+  width: 150px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 8;
+  transition: 0.5s;
+}
+.info:hover .tooltip {
+  opacity: 1;
+  left: 85px;
+  transition: 0.5s;
+}
+.table_text {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.sidebar.open .table_text {
+  opacity: 1;
+  transition: 0.5s;
+}
