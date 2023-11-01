@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: #e7f3fd;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  position: relative;
+  max-width: 1350px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: white;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn.active {
+  background: #ff5945;
+  color: white;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex-basis: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: #ff5945 1px solid;
+  overflow: hidden;
+}
+.card.hidden {
+  display: none;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+.card_body {
+  padding: 15px 20px 20px;
+}
+.card_title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+.card_text {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.card_link {
+  padding: 10px 20px;
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ff5945;
+  border: 1px solid #ff5945;
+  transition: 0.5s;
+}
+
+.card_link:hover {
+  color: white;
+  background: #ff5945;
+  transition: 0.5s;
+}
