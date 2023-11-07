@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Sidebar Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li class="logo">
+            <a href="#">
+              <div class="icon"><img src="./img/logo.png" alt="" /></div>
+              <div class="text">Kaneki Logo</div>
+            </a>
+          </li>
+          <div class="menu">
+            <li style="--bg: #0eb402">
+              <a href="#">
+                <div class="icon"><i class="fa-solid fa-house"></i></div>
+                <div class="text">Home</div>
+              </a>
+            </li>
+            <li style="--bg: #f44336" class="active">
+              <a href="#">
+                <div class="icon"><i class="fa-solid fa-user"></i></div>
+                <div class="text">Profile</div>
+              </a>
+            </li>
+            <li style="--bg: #b937d6">
+              <a href="#">
+                <div class="icon"><i class="fa-regular fa-comment"></i></div>
+                <div class="text">Inbox</div>
+              </a>
+            </li>
+            <li style="--bg: #1aafe5">
+              <a href="#">
+                <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
+                <div class="text">Analytics</div>
+              </a>
+            </li>
+            <li style="--bg: #f52dee">
+              <a href="#">
+                <div class="icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div class="text">Order</div>
+              </a>
+            </li>
+            <li style="--bg: #cf2268">
+              <a href="#">
+                <div class="icon"><i class="fa-solid fa-gear"></i></div>
+                <div class="text">Setting</div>
+              </a>
+            </li>
+          </div>
+          <div class="bottom">
+            <li style="--bg: #333">
+              <a href="#">
+                <div class="icon">
+                  <div class="imgBx">
+                    <img src="./img/avatar.png" alt="" />
+                  </div>
+                </div>
+                <div class="text">Kaneki Dev</div>
+              </a>
+            </li>
+            <li style="--bg: #333">
+              <a href="#">
+                <div class="icon">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                </div>
+                <div class="text">Logout</div>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="header">
+          <div class="menuToggle"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
