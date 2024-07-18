@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    gap: 25px;
+}
+
+li {
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+li:hover {
+    width: 180px;
+    box-shadow: none;
+}
+
+.title {
+    position: absolute;
+    color: white;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: scale(0);
+    transition-delay: 0;
+    transition: 0.5s;
+}
+
+li:hover .title {
+    transform: scale(1);
+    transition-delay: 0.25s;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 60px;
+    background: linear-gradient(45deg, var(--i), var(--j));
+    opacity: 0;
+    transition: 0.5s;
+}
+
+li:hover::before {
+    opacity: 1;
+}
+
+li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+    background: linear-gradient(45deg, var(--i), var(--j));
+    transition: 0.5s;
+    filter: blur(20px);
+    z-index: -1;
+    opacity: 0;
+}
+
+li:hover::after {
+    opacity: 1;
+}
+
+li ion-icon {
+    color: #777;
+    font-size: 1.75em;
+    transform: 0.5s;
+    transition-delay: 0.25s;
+}
+
+li:hover ion-icon {
+    transform: scale(0);
+    color: white;
+    transition-delay: 0s;
+}

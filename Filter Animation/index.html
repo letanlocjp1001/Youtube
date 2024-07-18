@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Filter Using HTML CSS JS</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="box">
+        <h1>Category Filter Using HTML CSS JS</h1>
+        <div class="filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="backend">Backend</button>
+            <button class="filter-btn" data-filter="fullstack">FullStack</button>
+        </div>
+
+        <ul class="list-item">
+
+            <li class="item" data-category="fullstack">
+                <div class="item-details">
+                    <span class="item-category">Fullstack</span>
+                </div>
+                <h2 class="item-name">Google</h2>
+            </li>
+
+            <li class="item" data-category="backend">
+                <div class="item-details">
+                    <span class="item-category">Backend</span>
+                </div>
+                <h2 class="item-name">Facebook App</h2>
+            </li>
+
+            <li class="item" data-category="fullstack">
+                <div class="item-details">
+                    <span class="item-category">Fullstack</span>
+                </div>
+                <h2 class="item-name">Youtube Web Site</h2>
+            </li>
+
+            <li class="item" data-category="frontend">
+                <div class="item-details">
+                    <span class="item-category">Frontend</span>
+                </div>
+                <h2 class="item-name">TikTok App</h2>
+            </li>
+
+            <li class="item" data-category="frontend">
+                <div class="item-details">
+                    <span class="item-category">Frontend</span>
+                </div>
+                <h2 class="item-name">Apple Inc</h2>
+            </li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

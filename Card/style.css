@@ -1,0 +1,28 @@
+.card {
+  perspective: 1500rem;
+  position: relative;
+  height: 200px;
+  width: 300px;
+}
+.card_side {
+  height: 200px;
+  width: 300px;
+  transition: all 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.card_side-back {
+  transform: rotateY(180deg);
+  background: red;
+}
+.card:hover .card_side-front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card_side-back {
+  transform: rotateY(0);
+}/*# sourceMappingURL=style.css.map */

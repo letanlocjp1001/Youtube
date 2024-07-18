@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling Snows Animated</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+        function snows() {
+            let e = document.createElement('div')
+            e.className = "snow"
+            document.body.appendChild(e)
+
+            e.style.left = Math.random() * + innerWidth + 'px'
+
+            let size = Math.random() * 12
+            let duration = Math.random() * 3
+
+            e.style.fontSize = 12 + size + 'px'
+            e.style.animationDuration = 3 + duration + 's'
+
+            setTimeout(function () {
+                document.body.removeChild(e)
+            }, 5000)
+        }
+
+        setInterval(function () {
+            snows()
+        }, 100)
+    </script>
+
+</body>
+
+</html>
